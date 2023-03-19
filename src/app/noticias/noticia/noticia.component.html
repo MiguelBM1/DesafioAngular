@@ -1,0 +1,17 @@
+<section class="noticias">
+    <div class="noticias-container">
+      <h3>
+        New
+      </h3>
+      <ul>
+        <li class="noticias-list" *ngFor="let noticias of listanoticias; let i =index">
+          <h2>
+             {{noticias.Encabezado}}
+          </h2>
+          <p>
+             {{noticias.descripcion}}
+          </p>
+        </li>
+      </ul>
+    </div>  
+  </section>

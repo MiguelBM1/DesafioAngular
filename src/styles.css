@@ -1,1 +1,217 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    margin: 0;
+}
+.container{
+    max-width: 750px;
+    padding: 2rem;
+    background: rgb(255, 255, 255);
+   }
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    background: #000;
+}
+.navlist{
+    display: none;
+}
+main{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2em;
+}
+.main-image-container{
+    height: 20rem;
+    width: 100%;
+    background-image: url('assets/images/image-web-3-mobile.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.main-content{
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+}
+main h1 {
+    font-size: clamp(30px, 2vw + 1.5rem, 70px );
+    font-weight: 800;
+    padding-top: 1rem;
+}
+.main-content p{
+    text-align: left;
+    line-height: 23px;
+    color: rgb(131, 123, 126);
+    font-size: 14px;
+    padding: 1.5em 0;
+}
+main a{
+    padding: min(7vmin, 1rem);
+    background: rgb(228, 85, 85);
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 3px;
+    color: rgb(226, 226, 226);
+    max-width: 10em;
+    cursor: pointer;
+    font-size: 15px;
+}
+main a:hover{
+    background-color: #000;
+}
+.noticias{
+    margin-bottom: 2em;
+    background: rgb(4, 0, 24);
+}
+.noticias-container{
+    padding: 1rem;
+}
+.noticias h3{
+    color: rgb(185, 149, 71);
+    font-size: min(6vmin, calc(2rem + 0.23vmax), 2rem);;
+}
+.noticias h2{
+    margin-bottom: 0.5em;
+    font-size: min(6vmin, calc(0.7rem + 0.23vmax), 2rem);
+    font-weight: 700;
+    cursor: pointer;
+}
+.noticias h2:hover{
+    color: hsl(35, 77%, 62%);
+}
+.noticias li{
+    list-style: none;
+    padding: 1.5em 0;
+    color: hsl(36, 100%, 99%);
+}
+.noticias p{
+    color: hsl(233, 8%, 79%);
+    font-size: min(6vmin, calc(0.7rem + 0.23vmax), 2rem);
+    line-height: 25px;
+}
+.noticias + section{
+    margin-bottom: 2em;
+}
+.noticias-list{
+    border-bottom: 1px outset hsl(36, 100%, 99%);
+}
+.masnoticias{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.masnoticias-image-container{
+    height: 6em;
+    flex-basis: 30%;
+}
+.masnoticias img{
+    height: 100%;
+}
+.masnoticias-content{
+    display: flex;
+    flex-basis: 60%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.masnoticias-content span{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 800;
+    color: hsl(236, 13%, 42%);
+}
+.masnoticias-content h2{
+    font-size: min(6vmin, calc(0.7rem + 0.23vmax), 2rem);;
+    cursor: pointer;
+}
+.masnoticias-content h2:hover{
+    color: hsl(5, 85%, 63%);
+}
+.masnoticias-content p{
+    font-size: min(6vmin, calc(0.7rem + 0.23vmax), 2rem);
+    color: hsl(236, 13%, 42%);
+    max-width: 90%;
+}
+
+
+@media screen and (min-width: 750px) {
+    .container{
+        max-width: 100%;
+    }
+    
+
+    .navlist{
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        flex-basis: 50%;
+    }
+    .navlist li{
+        list-style: none;
+        cursor: pointer;
+        color: hsl(236, 13%, 42%);
+    }
+    .navlist li{
+        margin: 0;
+    }
+
+    .top-content{ 
+        display: flex;
+        justify-content: space-between;
+        height: 80vh;
+        margin-bottom: 10vh;
+    }
+    main{
+        flex-basis: 65%;
+    }
+    .noticias{
+        flex-basis: 32%;
+        height: 100%;
+        margin-left: 1em;
+    }
+    .main-image-container{
+        background-image: url('assets/images/image-web-3-desktop.jpg');
+        height: 55%;
+    }
+    .main-content{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .h1-container{
+        flex-basis: 50%;
+    }
+    .h1-container + div{
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .nbajas{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    .masnoticias{
+        flex-basis: 33.33%;
+    }
+}
+
+

@@ -1,0 +1,18 @@
+<section class="nbajas">
+    <section class="masnoticias" *ngFor="let noticia of listmasanoticias; let i=index">
+      <div class="masnoticias-image-container">
+        <img src="{{noticia.imagen}}" alt="">          
+      </div>
+      <div class="masnoticias-content">
+        <span>
+          {{noticia.numero}}
+        </span>
+        <h2>
+          {{noticia.Encabezado}}
+        </h2>
+        <p>
+          {{noticia.descripcion}}
+        </p>
+      </div>
+    </section> 
+  </section>
